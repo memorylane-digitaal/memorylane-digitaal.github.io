@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/svg+xml" href="./images/icons/d8.svg">
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <script type="text/javascript" src="./bookflip.js"></script>
+    </head>
+    <body>
+        <div class="navbar">
+            <a onclick="document.getElementById('start').scrollIntoView({ behavior: 'smooth' })">START</a>
+            <a onclick="document.getElementById('diensten').scrollIntoView({ behavior: 'smooth' })">DIENSTEN</a>
+            <a onclick="document.getElementById('werk').scrollIntoView({ behavior: 'smooth' })">ONS WERK</a>
+            <a onclick="document.getElementById('prijzen').scrollIntoView({ behavior: 'smooth' })">PRIJZEN</a>
+            <a onclick="document.getElementById('identikit').scrollIntoView({ behavior: 'smooth' })">WIE ZIJN WIJ</a>
+            <a onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">CONTACT</a>
+        </div> 
+        <div class="body">
+            <div id='start' class="parallax wrapper-1" style="padding-top: 200px;">
+                <div class="title">
+                    <img src="./images/icons/vhs.svg" style="width: 100px; filter: invert(1);">
+                    <h1>MEMORY LANE</h1>
+                    <p style="font-weight: 100;">Voor herinneringen die blijven</p>
+                    <div class="socials">
+                        <a target="_blank" href="https://facebook.com"><img src="./images/icons/fb.svg" style="width: 50px; filter: invert(1);"></a>
+                        <a target="_blank" href="https://instagram.com"><img src="./images/icons/insta.svg" style="width: 50px; filter: invert(1);"></a>
+                        <a target="_blank" href="https://twitter.com"><img src="./images/icons/twitter.svg" style="width: 50px; filter: invert(1);"></a>
+                        <a target="_blank" href="https://pinterest.com"><img src="./images/icons/pinterest.svg" style="width: 50px; filter: invert(1);"></a>
+                    </div>
+
+                </div>
+            </div>
+            <div id='diensten' class="regular-wrapper">
+                <div class="content leather-brown">
+                    <h1>Diensten</h1>
+                    <hr />
+                    <p>
+                        Welkom op Memory Lane, de plek waar vroeger blijft leven. Oude video’s, een stapel foto’s of zelfs een VHS cassette teruggevonden? Wij digitaliseren ze voor jou! Alle herinneringen die hier passeren, komen er verzilverd weer uit. Zo doorstaan ze de tand des tijds en kan je erop terugkijken wanneer je maar wil. En niet alleen jij, want in een handomdraai kunnen ook vrienden en familie meegenieten van jouw verborgen parels.
+                    </p>
+                    <p>
+                        Media die wij voor jou kunnen digitaliseren zijn:
+                    </p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><img src="./images/icons/vhs.svg" style="width: 100px; filter: invert(1);"></td>
+                                <td><img src="./images/icons/d8.svg" style="width: 100px; filter: invert(1);"></td>
+                                <td><img src="./images/icons/film.svg" style="width: 100px; filter: invert(1);"></td>
+                                <td><img src="./images/icons/dia.svg" style="width: 100px; filter: invert(1);"></td>
+                            </tr>
+                            <tr>
+                                <td>VHS cassettes</td>
+                                <td>Digital8 tapes</td>
+                                <td>Negatieven</td>
+                                <td>Dia's en foto's</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id='werk' class="regular-wrapper">
+                <div class="content gallery" style="padding: 100px;">
+                    <h1>Ons Werk</h1>
+                    <hr />
+                    <p>
+                        Al jouw foto- en videomateriaal wordt met de uiterste zorgvuldigheid behandeld. Een mooi resultaat vinden we dan ook zeer belangrijk. Enkele mensen die al eerder passeerden op Memory Lane gunnen ons een blik in hun oude doos. Blader gerust eens door het fotoboek of verken de televisiezenders.
+                    </p>
+                    <div style="display: flex; justify-content: space-around; margin: 3em; flex-wrap: wrap;">
+                        <div id='myBook'></div>
+                        <div id='pages' style="display: none;">
+                            <span><img src='./images/book/img1.jpg'></span>
+                            <span><img src='./images/book/img2.jpg'></span>
+                            <span><img src='./images/book/img3.jpg'></span>
+                            <span><img src='./images/book/img4.jpg'></span>
+                            <span><img src='./images/book/img5.jpg'></span>
+                            <span><img src='./images/book/img6.jpg'></span>
+                            <span><img src='./images/book/img7.jpg'></span>
+                            <span><img src='./images/book/img8.jpg'></span>
+                            <span><img src='./images/book/img9.jpg'></span>
+                        </div>
+
+                        <div id='television' onclick='switchVideo()'>
+                            <img id='tv-source' src='./images/television/tele7.gif'>
+                            <img id='tv-frame' src='./images/tv.png'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id='prijzen' class="parallax wrapper-2">
+                <div class="content">
+                    <h1>Prijzen</h1>
+                    <hr />
+                    <br>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><img src="./images/icons/vhs.svg" style="width: 100px; filter: invert(1);"></td>
+                                <td><img src="./images/icons/d8.svg" style="width: 100px; filter: invert(1);"></td>
+                                <td><img src="./images/icons/film.svg" style="width: 100px; filter: invert(1);"></td>
+                                <td><img src="./images/icons/dia.svg" style="width: 100px; filter: invert(1);"></td>
+                            </tr>
+                            <tr>
+                                <td>VHS</td>
+                                <td>Digital8</td>
+                                <td>Negatieven</td>
+                                <td>Dia's en foto's</td>
+                            </tr>
+                            <tr class='prices' style="font-weight: 100;">
+                                <td><div>‎€8</div><p>/cassette</p></td>
+                                <td><div>‎€8</div><p>/cassette</p></td>
+                                <td><div>‎€0.20</div><p>/negatief</p></td>
+                                <td><div>‎€0.20</div><p>/dia of foto</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id=identikit class="regular-wrapper">
+                <div class="content leather">
+                    <h1>Wie zijn wij?</h1>
+                    <hr />
+                    <div class="kit">
+                        <img src='./images/identikit/Hanne.jpg'>
+                        <h2>Sam Van Emelen</h2>
+                        <strong>Leeftijd</strong><p>22</p>
+                        <strong>Beroep</strong><p>Consulent</p>
+                        <strong>Waarom Memory Lane?</strong>
+                        <p class="waarom">
+                            Ook wij hadden bij onze grootouders op zolder een immens arsenaal aand video's en foto's
+                            van vroeger. Na deze te digitaliseren was het heerlijk alle leuke reacties van familieleden
+                            te horen. Daarom wil ik dit plezier aan iedereen kunnen aanbieden.
+                        </p>
+                    </div>
+
+                    <div class="kit">
+                        <img src='./images/identikit/Hanne.jpg'>
+                        <h2>Hanne De Vleeschouwer</h2>
+                        <strong>Leeftijd</strong><p>21</p>
+                        <strong>Beroep</strong><p>Studente Journalistiek</p>
+                        <strong>Waarom Memory Lane?</strong>
+                        <p class="waarom">
+                            Niets is leuker dan neuzen door oude fotoboeken en videocassettes.
+                            Zien hoe ik zelf, mijn ouders en mijn grootouders vroeger leefden vind ik geweldig.
+                            Ik wil dat altijd meteen delen, maar een foto van een foto is maar niets.
+                            Alles digitaliseren gaf mij en mijn familie uren plezier.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id='contact' class="regular-wrapper">
+                <div class="content">
+                    <h1>Contacteer Ons</h1>
+                    <hr />
+                    <p>
+                        Heb je vragen over onze werking of wat wij voor jou kunnen betekenen? Aarzel dan niet om ons te contacteren. Wij zijn altijd bereid en beschikbaar om je van een antwoord te dienen.
+                    </p>
+                    <p>E-mail: <a href = "mailto: memorylane.digitaal@gmail.com">memorylane.digitaal@gmail.com</a></p>
+                    <p>GSM : + 32 4/94 89 43 43</p>
+                    
+                        
+                </div>
+            </div>
+            <div class="regular-wrapper">
+                <div class="content leather footer" style="padding: 20px;">
+                    <p style="font-size: 0.8em">
+                        © 2020 Memory Lane
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script src='./index.js'></script>
+</body>
+</html>
