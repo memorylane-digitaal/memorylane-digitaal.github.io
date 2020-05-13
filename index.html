@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="icon" type="image/svg+xml" href="./images/icons/d8.svg">
+        <link rel="icon" type="image/svg+xml" href="./images/logo.png">
         <link rel="stylesheet" type="text/css" href="index.css">
         <script type="text/javascript" src="./bookflip.js"></script>
     </head>
@@ -15,16 +15,14 @@
             <a onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">CONTACT</a>
         </div> 
         <div class="body">
-            <div id='start' class="parallax wrapper-1" style="padding-top: 200px;">
+            <div id='start' class="parallax wrapper-1" style="padding-top: 100px;">
                 <div class="title">
-                    <img src="./images/icons/vhs.svg" style="width: 100px; filter: invert(1);">
-                    <h1>MEMORY LANE</h1>
-                    <p style="font-weight: 100;">Voor herinneringen die blijven</p>
+                    <img id='logo' src="./images/logo.png">
+                    <h1 style="margin: 0.1em;">Memory Lane</h1>
+                    <p style="font-weight: 100;">Waar vroeger blijft leven</p>
                     <div class="socials">
                         <a target="_blank" href="https://facebook.com"><img src="./images/icons/fb.svg" style="width: 50px; filter: invert(1);"></a>
                         <a target="_blank" href="https://instagram.com"><img src="./images/icons/insta.svg" style="width: 50px; filter: invert(1);"></a>
-                        <a target="_blank" href="https://twitter.com"><img src="./images/icons/twitter.svg" style="width: 50px; filter: invert(1);"></a>
-                        <a target="_blank" href="https://pinterest.com"><img src="./images/icons/pinterest.svg" style="width: 50px; filter: invert(1);"></a>
                     </div>
 
                 </div>
@@ -67,6 +65,7 @@
                     <div style="display: flex; justify-content: space-around; margin: 3em; flex-wrap: wrap;">
                         <div id='myBook'></div>
                         <div id='pages' style="display: none;">
+                            <span class='cover'></span>
                             <span><img src='./images/book/img1.jpg'></span>
                             <span><img src='./images/book/img2.jpg'></span>
                             <span><img src='./images/book/img3.jpg'></span>
@@ -75,7 +74,7 @@
                             <span><img src='./images/book/img6.jpg'></span>
                             <span><img src='./images/book/img7.jpg'></span>
                             <span><img src='./images/book/img8.jpg'></span>
-                            <span><img src='./images/book/img9.jpg'></span>
+                            <span class='cover'></span>
                         </div>
 
                         <div id='television' onclick='switchVideo()'>
@@ -119,32 +118,39 @@
                 <div class="content leather">
                     <h1>Wie zijn wij?</h1>
                     <hr />
+                    <div style="display: flex; justify-content: space-around; margin: 3em; flex-wrap: wrap;">
                     <div class="kit">
-                        <img src='./images/identikit/Hanne.jpg'>
+                        <img src='./images/identikit/Sam.jpg'>
                         <h2>Sam Van Emelen</h2>
-                        <strong>Leeftijd</strong><p>22</p>
-                        <strong>Beroep</strong><p>Consulent</p>
-                        <strong>Waarom Memory Lane?</strong>
-                        <p class="waarom">
-                            Ook wij hadden bij onze grootouders op zolder een immens arsenaal aand video's en foto's
-                            van vroeger. Na deze te digitaliseren was het heerlijk alle leuke reacties van familieleden
-                            te horen. Daarom wil ik dit plezier aan iedereen kunnen aanbieden.
-                        </p>
+                        <div class='left'>
+                            <strong>Leeftijd</strong><p>22</p>
+                            <strong>Beroep</strong><p>Consulent</p>
+                            <strong>Waarom Memory Lane?</strong>
+                            <p class="waarom">
+                                Ook wij hadden bij onze grootouders op zolder een immens arsenaal aand video's en foto's
+                                van vroeger. Na deze te digitaliseren was het heerlijk alle leuke reacties van familieleden
+                                te horen. Daarom wil ik dit plezier aan iedereen kunnen aanbieden.
+                            </p>
+                        </div>
+                       
                     </div>
 
                     <div class="kit">
                         <img src='./images/identikit/Hanne.jpg'>
                         <h2>Hanne De Vleeschouwer</h2>
-                        <strong>Leeftijd</strong><p>21</p>
-                        <strong>Beroep</strong><p>Studente Journalistiek</p>
-                        <strong>Waarom Memory Lane?</strong>
-                        <p class="waarom">
-                            Niets is leuker dan neuzen door oude fotoboeken en videocassettes.
-                            Zien hoe ik zelf, mijn ouders en mijn grootouders vroeger leefden vind ik geweldig.
-                            Ik wil dat altijd meteen delen, maar een foto van een foto is maar niets.
-                            Alles digitaliseren gaf mij en mijn familie uren plezier.
-                        </p>
+                        <div class='left'>
+                           <strong>Leeftijd</strong><p>21</p>
+                            <strong>Beroep</strong><p>Studente Journalistiek</p>
+                            <strong>Waarom Memory Lane?</strong>
+                            <p class="waarom">
+                                Niets is leuker dan neuzen door oude fotoboeken en videocassettes.
+                                Zien hoe ik zelf, mijn ouders en mijn grootouders vroeger leefden vind ik geweldig.
+                                Ik wil dat altijd meteen delen, maar een foto van een foto is maar niets.
+                                Alles digitaliseren gaf mij en mijn familie uren plezier.
+                            </p> 
+                        </div>
                     </div>
+                </div>
                 </div>
             </div>
             <div id='contact' class="regular-wrapper">

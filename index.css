@@ -40,6 +40,11 @@ a {
     overflow-y:auto;
 }
 
+#logo {
+    width: 30%;
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
 .parallax {
     width: 100vw;
     height:110vh;
@@ -62,13 +67,13 @@ a {
 }
 
 .wrapper-1::before {
-    background-image: url("./images/parallax1.jpg");
+    background-image: url("./images/parallax/parallax1.jpg");
     transform:translateZ(-1px) scale(2);
     z-index: -1;
 }
 
 .wrapper-2::before {
-    background-image: url("./images/parallax1.jpg");
+    background-image: url("./images/parallax/parallax2.jpg");
     transform:translateZ(-1px) scale(2);
     z-index: -1;
 }
@@ -79,6 +84,11 @@ a {
     z-index: 2;
     position: relative;
 }
+h1, h2, h3, h4, h5, h6 {
+    font-family: Copperplate, "Copperplate Gothic Light";
+    font-weight: lighter;
+
+}
 
 .title {
     font-size: 2em;
@@ -87,13 +97,15 @@ a {
 
 .title p{
     font-size: 0.6em;
-    margin: -2em 0;
+    margin: -0.5em 0;
+    font-weight: lighter;
+    font-family: Copperplate, "Copperplate Gothic Light";
 }
 
 .title .socials {
     font-size: 1em;
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     left: 0;
     right: 0;
     margin-left: auto;
@@ -142,6 +154,7 @@ td {
 }
 
 #myBook {
+    margin-top: 1em;
     background-image: url('./images/book.png');
     background-size: cover ;
 }
@@ -157,11 +170,11 @@ td {
     background-image: url('./images/paper-right.jpg');
 }
 
-#myBook .page::after{
+#myBook .page span:not(.cover)::after{
     height: 1.5em;
     width: 1.5em;
     position: absolute;
-    top: 50%;
+    top: calc(50% - 0.75em);
     content: 'v';
     border: 1px solid black;
     border-radius: 50%;
@@ -169,7 +182,7 @@ td {
     background-color: var(--vintage-white);
 }
 
-#myBook .page.right::after{
+#myBook .page.right span:not(.cover)::after{
     right: 10px;
     transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
@@ -178,7 +191,7 @@ td {
     -o-transform: rotate(-90deg);
 }
 
-#myBook .page.left::after{
+#myBook .page.left span:not(.cover)::after{
     left: 10px;
     transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
@@ -193,7 +206,7 @@ td {
 
 #myBook .page img{
     text-align: center;
-    
+    box-shadow: ;
     position: absolute;
     
     top: 50%;
@@ -204,6 +217,14 @@ td {
 
     max-width: 90%;
     max-height: 90%;
+
+    -webkit-box-shadow: 0 0 10px 0 var(--vintage-black);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    0 0 10px 0 var(--vintage-black);  /* Firefox 3.5 - 3.6 */
+    box-shadow:         0 0 10px 0 var(--vintage-black);
+
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 #television {
@@ -212,11 +233,20 @@ td {
     width: 100%;
     position: relative;
     overflow: hidden;
+    margin-top: 1em;
+
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 #television img{
     max-width: 100%;
     cursor: pointer;
+
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 #tv-source {
@@ -226,6 +256,10 @@ td {
     height: 70%;
     top:10%;
     left: 5%;
+
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 #tv-frame {
@@ -233,24 +267,40 @@ td {
     width: 100%;
     top: 0;
     left: 0;
+
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 #identikit img {
-    max-width: 60%;
+    width: 60%;
     border-radius: 50%;
+
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 #identikit .kit {
-    background-color: rgba(255, 255, 255, 0.4);
-    display: inline-block;
-    vertical-align: top;
-    width: 40%;
-    margin: 1em;
-    padding: 0.5em;
+    width:60%;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: var(--vintage-black);
+    margin-top: 1em;
+    padding: 1em;
+}
+
+#identikit .left {
+    text-align: left;
+}
+
+#identikit h2 {
+    font-weight: bold;
 }
 
 #identikit strong {
-    font-size: 1.2em;
+    font-family: Copperplate, "Copperplate Gothic Light";
+    font-size: 1.1em;
 }
 
 #identikit p {
@@ -261,11 +311,19 @@ td {
     font-size: 0.8em;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1100px) {
+    #logo {
+        width: 15%;
+    }
+
     .content {
         padding: 100px 300px;
     }
     .content.gallery p{
         padding: 0 200px;
+    }
+
+    #identikit .kit {
+        width: 40%;
     }
   }
