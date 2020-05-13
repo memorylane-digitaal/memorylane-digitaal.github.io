@@ -97,7 +97,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .title p{
     font-size: 0.6em;
-    margin: -0.5em 0;
     font-weight: lighter;
     font-family: Copperplate, "Copperplate Gothic Light";
 }
@@ -296,6 +295,7 @@ td {
 
 #identikit h2 {
     font-weight: bold;
+    height: 2em;
 }
 
 #identikit strong {
