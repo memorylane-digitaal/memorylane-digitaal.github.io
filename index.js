@@ -5,9 +5,16 @@ var pSpeed=20;
 var pageBackgroundColor="#F9E6BB"
 var pageBorderColor="rgba(0,0,0,0)",pageBorderStyle="solid",pageBorderWidth="10";
 
+const screenWidth = document.getElementsByClassName('navbar')[0].offsetWidth
 
-var pWidth=document.getElementsByClassName('navbar')[0].offsetWidth*0.15;
-var pHeight=document.getElementsByClassName('navbar')[0].offsetWidth*0.72*0.3;
+if (screenWidth < 1000){
+    var pWidth=screenWidth*0.25;
+    var pHeight=screenWidth*0.72*0.5;
+} else {
+    var pWidth=screenWidth*0.15;
+    var pHeight=screenWidth*0.72*0.3;
+}
+
 
 ini();
 

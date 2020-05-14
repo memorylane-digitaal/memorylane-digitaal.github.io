@@ -47,7 +47,7 @@ a {
 }
 .parallax {
     width: 100vw;
-    height:110vh;
+    min-height:110vh;
     color: var(--vintage-white);
     box-sizing: border-box;
     transform-style: preserve-3d;
