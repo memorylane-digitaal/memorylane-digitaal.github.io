@@ -327,21 +327,3 @@ td {
         width: 40%;
     }
   }
-
-  @media (pointer:coarse) {
-    #logo {
-        width: 15%;
-    }
-
-    .content {
-        padding: 100px 300px;
-    }
-    .content.gallery p{
-        padding: 0 200px;
-    }
-
-    #identikit .kit {
-        width: 40%;
-    }
-  }
-}
