@@ -1,5 +1,5 @@
 
-
+function isMobile() { return ('ontouchstart' in document.documentElement); }
 
 var pSpeed=20;
 var pageBackgroundColor="#F9E6BB"
@@ -7,7 +7,7 @@ var pageBorderColor="rgba(0,0,0,0)",pageBorderStyle="solid",pageBorderWidth="10"
 
 const screenWidth = document.getElementsByClassName('navbar')[0].offsetWidth
 
-if (screenWidth < 1000){
+if (screenWidth < 1000 || isMobile()){
     var pWidth=screenWidth*0.25;
     var pHeight=screenWidth*0.72*0.5;
 } else {
